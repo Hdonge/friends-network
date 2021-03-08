@@ -39,7 +39,7 @@ export default function FriendList({ friendList, setUpdatedFriendList }) {
 
     const markFavorite = (friendObj) => {
         friendstore.updateFriend(friendObj);
-        let updateList = friendstore.getFriends();
+        let updateList = friendstore.getFriends().slice();
         setUpdatedFriendList(updateList);
     };
 
